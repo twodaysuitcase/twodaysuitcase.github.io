@@ -1,0 +1,11 @@
+name: Two-Day Suitcase
+markdown: redcarpet
+pygments: true
+timezone: America/Chicago
+redcarpet:
+  extensions:
+    - hard_wrap
+    - no_intra_emphasis
+    - autolink
+    - strikethrough
+    - fenced_code_blocks

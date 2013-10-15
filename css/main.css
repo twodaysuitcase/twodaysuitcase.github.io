@@ -1,0 +1,123 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+
+body {
+  color: #eeeebb;
+  background: url(/images/dark_wood.jpg) center top repeat-y black;
+  font: 13.34px Helvetica, Arial, sans-serif;
+  font-size: small;
+}
+
+h1, h2, h3, h4, h5, h6 { font-size: 100%; margin-bottom: 1em; }
+
+a         { color: #eeeebb; }
+a:visited { color: #eeeebb; }
+a:hover   { color: #ffffff; }
+
+@font-face {
+  font-family: GoudyBookletter1911;
+  src: url(/fonts/theleagueof-goudy-bookletter-1911-85ff5b8/webfonts/goudy_bookletter_1911-webfont.woff),
+  url(/fonts/theleagueof-goudy-bookletter-1911-85ff5b8/webfonts/goudy_bookletter_1911-webfont.svg),
+  url(/fonts/theleagueof-goudy-bookletter-1911-85ff5b8/webfonts/goudy_bookletter_1911-webfont.eot);
+}
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+
+.site {
+  font-size: 115%;
+  font-family: GoudyBookletter1911;
+  line-height: 1.5em;
+}
+
+.header h1 { display: none; }
+
+.header {
+  margin-top: 1em;
+  padding: 0 2em;
+  text-align: center;
+  background: url(/images/green_gradient.png) left center repeat-x;
+}
+
+.header img, .header .social {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header .social {
+  margin: 0 2em;
+}
+
+.home-main {
+  width: 529px;
+  margin: auto;
+}
+
+.home-main img.hero {
+  float: left;
+}
+
+.home-main ul {
+  display: inline-block;
+  margin: 1em;
+  list-style: none;
+}
+
+.upcoming {
+  clear: both;
+  background: #771100;
+  border: 4px solid #eeeebb;
+  max-width: 40em;
+  margin: 2em auto;
+  padding: 1em 2em;font-size: 120%;
+}
+
+.upcoming h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.upcoming table {
+  width: 100%;
+}
+
+.upcoming td { white-space: nowrap; }
+
+.site .meta {
+  color: #aaa;
+}
+
+.site .footer {
+  color: #666;
+  width: 40em;
+  margin: 2em auto 2em auto;
+  overflow: hidden;
+}
+
+.site .footer .left {
+  float: left;
+  margin-right: 3em;
+}
+
+.site .footer .right {
+  text-align: right;
+}
+
+.site .footer:after {
+  content: " ";
+  clear: both;
+}
