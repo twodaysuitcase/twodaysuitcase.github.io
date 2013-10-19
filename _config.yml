@@ -2,6 +2,7 @@ name: Two-Day Suitcase
 markdown: redcarpet
 pygments: true
 timezone: America/Chicago
+exclude: [Gemfile, Gemfile.lock]
 redcarpet:
   extensions:
     - hard_wrap
