@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
 }
+address { font-style: normal; }
 
 html, body { height: 100%; }
 
@@ -19,7 +20,7 @@ body {
   font-size: small;
 }
 
-h1, h2, h3, h4, h5, h6 { font-size: 100%; margin-bottom: 1em; }
+h1, h2, h3, h4, h5, h6 { margin-bottom: 1em; font-weight: normal; }
 
 a         { color: #eeeebb; }
 a:visited { color: #eeeebb; }
@@ -31,12 +32,6 @@ a:hover   { color: #ffffff; }
   url(/fonts/theleagueof-goudy-bookletter-1911-85ff5b8/webfonts/goudy_bookletter_1911-webfont.svg),
   url(/fonts/theleagueof-goudy-bookletter-1911-85ff5b8/webfonts/goudy_bookletter_1911-webfont.eot);
 }
-
-/*****************************************************************************/
-/*
-/* Site
-/*
-/*****************************************************************************/
 
 .site {
   font-size: 115%;
@@ -62,6 +57,40 @@ a:hover   { color: #ffffff; }
   margin: 0 2em;
 }
 
+.site h1 {
+  font-size: 150%;
+}
+
+.site p { margin: 1em 0; }
+
+.site .meta {
+  color: #aaa;
+}
+
+.site .footer {
+  color: #666;
+  width: 40em;
+  margin: 2em auto 2em auto;
+  overflow: hidden;
+}
+
+.site .footer .left {
+  float: left;
+  margin-right: 3em;
+}
+
+.site .footer .right {
+  text-align: right;
+}
+
+.site .footer:after {
+  content: " ";
+  clear: both;
+}
+
+/******************/
+/* home
+/******************/
 .home-main {
   width: 529px;
   margin: auto;
@@ -97,27 +126,12 @@ a:hover   { color: #ffffff; }
 
 .upcoming td { white-space: nowrap; }
 
-.site .meta {
-  color: #aaa;
-}
+/**************/
+/* show
+/**************/
 
-.site .footer {
-  color: #666;
+.site .show-details {
+  position: relative;
   width: 40em;
-  margin: 2em auto 2em auto;
-  overflow: hidden;
-}
-
-.site .footer .left {
-  float: left;
-  margin-right: 3em;
-}
-
-.site .footer .right {
-  text-align: right;
-}
-
-.site .footer:after {
-  content: " ";
-  clear: both;
+  margin: auto;
 }

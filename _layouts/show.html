@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="show-details" itemscope itemtype="http://www.schema.org/MusicEvent">
+  <h1>
+    <time itemprop="startDate" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%A, %b %-d %Y, %-I:%M %p" }}</time>
+    to
+    <time itemprop="endDate" datetime="{{ page.endDate | date_to_xmlschema }}">{{ page.endDate | date: "%-I:%M %p" }}</time>:
+    <br/>
+    <span itemprop="name">{{ page.title }}</span>
+  </h1>
+  <p>
+    <address itemprop="location">
+      <a href="{{ page.mapUrl }}">{{ page.address }}</a>
+    </address>
+  </p>
+
+  {{ content }}
+
+</div>
