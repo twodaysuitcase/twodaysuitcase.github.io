@@ -2,34 +2,64 @@
 layout: default
 ---
 
-<div class="home-main">
-  <img src="/images/band_photo_529x484.jpg" class="hero" alt="band photo">
-  <div>
-    <iframe style="border: 0; width: 529px; height: 120px;"
-            src="http://bandcamp.com/EmbeddedPlayer/album=346156651/size=medium/bgcol=333333/linkcol=ffffff/artwork=false/transparent=true/"
-            seamless>
-      <a href="http://twodaysuitcase.bandcamp.com/album/congress-house-sessions-demo">Congress House Sessions - Demo by Two-Day Suitcase</a>
-    </iframe>
+<div itemscope itemtype="http://schema.org/MusicGroup">
+  <meta itemprop="url" content="http://twodaysuitcase.com/"/>
+  <div class="home-main">
+    <img src="/images/band_photo_529x484.jpg" class="hero"
+         alt="band photo" itemprop="image">
+    <div>
+      <iframe style="border: 0; width: 529px; height: 120px;"
+              src="http://bandcamp.com/EmbeddedPlayer/album=346156651/size=medium/bgcol=333333/linkcol=ffffff/artwork=false/transparent=true/"
+              seamless>
+        <a href="http://twodaysuitcase.bandcamp.com/album/congress-house-sessions-demo">Congress House Sessions - Demo by Two-Day Suitcase</a>
+      </iframe>
+    </div>
   </div>
-</div>
 
-<div class="upcoming">
-  <h2>Upcoming Shows</h2>
-  <table>
-    <tbody>
-      {% for show in site.categories.shows reversed %}
-      <tr itemscope itemtype="http://www.schema.org/MusicEvent">
-        <td class="when">
-          <time itemprop="startDate" datetime="{{ show.date | date_to_xmlschema }}">{{ show.date | date: "%A, %b %-d, %-I:%M %p" }}</time>
-          to
-          <time itemprop="endDate" datetime="{{ show.endDate | date_to_xmlschema }}">{{ show.endDate | date: "%-I:%M %p" }}</time>
-        </td>
-        <td class="where">
-          <a href="{{ show.url }}" itemprop="url"><span itemprop="name">{{ show.title }}</span></a>
-          (<a href="{{ show.mapUrl }}">map</a>)
-        </td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  <div class="upcoming">
+    <h2>Upcoming Shows</h2>
+    <table>
+      <tbody>
+        {% for show in site.categories.shows reversed %}
+        <tr itemprop="event" itemscope itemtype="http://www.schema.org/MusicEvent">
+          <td class="when">
+            <time itemprop="startDate" datetime="{{ show.date | date_to_xmlschema }}">{{ show.date | date: "%A, %b %-d, %-I:%M %p" }}</time>
+            to
+            <time itemprop="endDate" datetime="{{ show.endDate | date_to_xmlschema }}">{{ show.endDate | date: "%-I:%M %p" }}</time>
+          </td>
+          <td class="where">
+            <a href="{{ show.url }}" itemprop="url"><span itemprop="name">{{ show.title }}</span></a>
+            (<a href="{{ show.mapUrl }}">map</a>)
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="members">
+    <p>
+      <span itemprop="name">Two-Day Suitcase</a> is
+      <ul>
+        <li itemprop="musicGroupMember" itemscope itemtype="http://www.schema.org/Person">
+          <span itemprop="name">Taylor Acee</span> - <span itemprop="description">vocals, acoustic guitar</span>
+        </li>
+        <li itemprop="musicGroupMember" itemscope itemtype="http://www.schema.org/Person">
+          <span itemprop="name">Matt Meldrum</span> - <span itemprop="description">vocals, upright bass</span>
+        </li>
+        <li itemprop="musicGroupMember" itemscope itemtype="http://www.schema.org/Person">
+          <span itemprop="name">Danielle Hartman</span> - <span itemprop="description">flute</span>
+        </li>
+        <li itemprop="musicGroupMember" itemscope itemtype="http://www.schema.org/Person">
+          <span itemprop="name">Stephanie Meldrum</span> - <span itemprop="description">keys</span>
+        </li>
+        <li itemprop="musicGroupMember" itemscope itemtype="http://www.schema.org/Person">
+          <span itemprop="name">Kevin Schubert</span> - <span itemprop="description">percussion</span>
+        </li>
+        <li itemprop="musicGroupMember" itemscope itemtype="http://www.schema.org/Person">
+          <span itemprop="name">John Hume</span> - <span itemprop="description">percussion</span>
+        </li>
+      </ul>
+    </p>
+  </div>
 </div>

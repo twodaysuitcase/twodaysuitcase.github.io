@@ -127,6 +127,18 @@ a:hover   { color: #ffffff; }
 
 .upcoming td { white-space: nowrap; }
 
+.members {
+  clear: both;
+  background: rgba(0, 0, 0, 0.6);
+  max-width: 20em;
+  margin: 2em auto;
+  padding: 1em 2em;
+}
+
+.members ul {
+  list-style: none;
+}
+
 /**************/
 /* show
 /**************/
