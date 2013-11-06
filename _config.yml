@@ -1,4 +1,5 @@
 name: Two-Day Suitcase
+url: http://twodaysuitcase.com
 markdown: redcarpet
 pygments: true
 timezone: America/Chicago
