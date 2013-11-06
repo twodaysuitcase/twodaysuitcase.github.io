@@ -2,6 +2,9 @@
 layout: default
 ---
 <div class="show-details" itemscope itemtype="http://www.schema.org/MusicEvent">
+  {% if page.endDate < site.time %}
+  <h1><a href="/#upcoming-shows">Find upcoming shows here!</a></h1>
+  {% endif %}
   <h1>
     <time itemprop="startDate" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%A, %b %-d %Y, %-I:%M %p" }}</time>
     to
