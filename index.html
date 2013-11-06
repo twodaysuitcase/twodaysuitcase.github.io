@@ -21,6 +21,7 @@ layout: default
     <table>
       <tbody>
         {% for show in site.categories.shows reversed %}
+        {% if show.endDate > site.time %}
         <tr itemprop="event" itemscope itemtype="http://www.schema.org/MusicEvent">
           <td class="when">
             <time itemprop="startDate" datetime="{{ show.date | date_to_xmlschema }}">{{ show.date | date: "%A, %b %-d, %-I:%M %p" }}</time>
@@ -32,6 +33,7 @@ layout: default
             (<a href="{{ show.mapUrl }}">map</a>)
           </td>
         </tr>
+        {% endif %}
         {% endfor %}
       </tbody>
     </table>
