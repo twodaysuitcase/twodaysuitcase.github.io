@@ -125,7 +125,8 @@ a:hover   { color: #ffffff; }
   width: 100%;
 }
 
-.upcoming td { white-space: nowrap; }
+.upcoming ul { list-style-type: none; }
+.upcoming .where { margin-left: 1em; }
 
 .members {
   clear: both;
