@@ -91,7 +91,7 @@ a:hover   { color: #ffffff; }
 /******************/
 /* home
 /******************/
-.home-main, .fb-like-box {
+.home-main, .fb-like-box-wrapper {
   width: 529px;
   margin: auto;
 }
