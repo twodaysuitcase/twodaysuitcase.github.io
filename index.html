@@ -39,6 +39,11 @@ layout: default
     </ul>
   </div>
 
+  <div class="fb-like-box-wrapper">
+    <!-- this next line was generated from https://developers.facebook.com/docs/plugins/like-box-for-pages/ -->
+    <div class="fb-like-box" data-href="http://www.facebook.com/TwoDaySuitcase" data-width="529" data-colorscheme="dark" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
+  </div>
+
   <div class="members">
     <p>
       <span itemprop="name">Two-Day Suitcase</span> is
@@ -65,3 +70,12 @@ layout: default
     </p>
   </div>
 </div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=584231071667430";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
