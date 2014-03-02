@@ -3,8 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Two-Day Suitcase</title>
+        <title>{% if page.longTitle %}{{ page.longTitle }}{% else %}{{ page.title }}{% endif %}</title>
         <meta name="viewport" content="width=700, initial-scale=1.0">
+        <meta name="twitter:site" content="@TwoDaySuitcase">
+        <meta property="og:type" content="website">
+        <meta property="og:title"
+              content="{% if page.longTitle %}{{ page.longTitle }}{% else %}{{ page.title }}{% endif %}">
+        <meta property="og:description"
+              content="{% if page.description %}{{ page.description }}{% else %}Acoustic soul? Folk-funk? Something like that.{% endif %}">
+        {% if page.image %}
+          <meta property="og:image" content="{{ page.image }}">
+        {% endif %}
         <link rel="stylesheet" href="/css/main.css">
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
