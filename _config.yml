@@ -1,7 +1,7 @@
 name: Two-Day Suitcase
 url: http://twodaysuitcase.com
 markdown: redcarpet
-pygments: true
+highlighter: null
 timezone: America/Chicago
 exclude: [Gemfile, Gemfile.lock]
 redcarpet:
