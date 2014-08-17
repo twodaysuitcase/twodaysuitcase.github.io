@@ -3,7 +3,7 @@ url: http://twodaysuitcase.com
 markdown: redcarpet
 highlighter: null
 timezone: America/Chicago
-exclude: [Gemfile, Gemfile.lock]
+exclude: [Gemfile, Gemfile.lock, run_local.sh]
 redcarpet:
   extensions:
     - hard_wrap
